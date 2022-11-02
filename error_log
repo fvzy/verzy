@@ -1,0 +1,9 @@
+[02-Nov-2022 12:23:16 Asia/Kolkata] PHP Warning:  require_once(parser-php-version.php): failed to open stream: No such file or directory in /home/uziobowq/host.verzy.my.id/config/config.php on line 5
+[02-Nov-2022 12:23:16 Asia/Kolkata] PHP Fatal error:  require_once(): Failed opening required 'parser-php-version.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/uziobowq/host.verzy.my.id/config/config.php on line 5
+[02-Nov-2022 12:23:17 Asia/Kolkata] PHP Warning:  require_once(parser-php-version.php): failed to open stream: No such file or directory in /home/uziobowq/host.verzy.my.id/config/config.php on line 5
+[02-Nov-2022 12:23:17 Asia/Kolkata] PHP Fatal error:  require_once(): Failed opening required 'parser-php-version.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/uziobowq/host.verzy.my.id/config/config.php on line 5
+[02-Nov-2022 08:06:23 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/uziobowq/host.verzy.my.id/config/config.php on line 47
+[02-Nov-2022 08:06:25 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/uziobowq/host.verzy.my.id/config/config.php on line 47
+[02-Nov-2022 08:37:01 UTC] PHP Fatal error:  Constant expression contains invalid operations in /home/uziobowq/host.verzy.my.id/config/config.php on line 1
+[02-Nov-2022 08:37:01 UTC] PHP Fatal error:  Constant expression contains invalid operations in /home/uziobowq/host.verzy.my.id/config/config.php on line 1
+[02-Nov-2022 08:37:03 UTC] PHP Fatal error:  Constant expression contains invalid operations in /home/uziobowq/host.verzy.my.id/config/config.php on line 1

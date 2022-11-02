@@ -1,0 +1,98 @@
+Header set Access-Control-Allow-Origin *
+
+Options All -Indexes
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+RewriteEngine on
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
+
+# Rewrite Url
+
+
+# LOGIN | REG | NHĐ RIGHT
+RewriteRule ^reg$ /client/reg.php [L]
+RewriteRule ^login$ /client/login.php [L]
+RewriteRule ^logout$ /client/logout.php [L]
+
+
+# CRON | NHĐ RIGHT
+RewriteRule ^CronMomo$ /Cron/NhdRight_Momo/nhdright.php [L]
+RewriteRule ^CronMbbank$ /Cron/NhdRight_Mbbank/nhdright.php [L]
+RewriteRule ^naptsrajax$ /Cron/NhdRight_Tsr/index.php [L]
+
+
+# CLIENT | NHĐ RIGHT
+RewriteRule ^profile$ /client/profile.php [L]
+RewriteRule ^mua-mien$ /client/muadomain.php [L]
+RewriteRule ^napthe$ /client/napthe.php [L]
+RewriteRule ^naptsr$ /client/naptsr.php [L]
+RewriteRule ^quan-ly-host$ /client/lsmuahost.php [L]
+RewriteRule ^quan-ly-code$ /client/lsmuacode.php [L]
+RewriteRule ^mua-hosting/([A-Za-z0-9-]+) /client/muahost.php?id=$1 [L]
+RewriteRule ^mua-hosting-da/([A-Za-z0-9-]+) /client/muahostda.php?id=$1 [L]
+RewriteRule ^quan-ly/([A-Za-z0-9-]+) /client/quanlyhost.php?id=$1 [L]
+RewriteRule ^mua-code/([A-Za-z0-9-]+) /client/muacode.php?id=$1 [L]
+RewriteRule ^host$ /client/host.php [L]
+RewriteRule ^kho-code-web$ /client/code.php [L]
+RewriteRule ^muahosthk$ /client/muahosthk.php [L]
+RewriteRule ^hostda$ /client/hostda.php [L]
+RewriteRule ^napatm$ /client/danhsachnapatm.php [L]
+RewriteRule ^napmomo$ /client/napmomo.php [L]
+RewriteRule ^napmbbank$ /client/napmbbank.php [L]
+RewriteRule ^napkimcuongauto$ /client/napkimcuongauto.php [L]
+RewriteRule ^nap-giftcode$ /client/napcode.php [L]
+RewriteRule ^chuyentien$ /client/chuyentien.php [L]
+RewriteRule ^quan-ly-web/([A-Za-z0-9-]+) /client/quanlyshop.php?id=$1 [L]
+RewriteRule ^addmbbank$ /client/themmbbank.php [L]
+RewriteRule ^addmomo$ /client/themmomo.php [L]
+RewriteRule ^apimomo$ /client/apimomo.php [L]
+RewriteRule ^apimbbank$ /client/apimbbank.php [L]
+RewriteRule ^addtsr$ /client/themthesieure.php [L]
+RewriteRule ^apitsr$ /client/apithesieure.php [L]
+RewriteRule ^giahanapi$ /client/giahanapi.php [L]
+
+
+# AJAX | NHĐ RIGHT
+RewriteRule ^muahost$ /ajax/muahost.php [L]
+RewriteRule ^muahostda$ /ajax/muahostda.php [L]
+RewriteRule ^naptheajax$ /ajax/napthetsr.php [L]
+RewriteRule ^muadomain$ /ajax/muadomain.php [L]
+RewriteRule ^doimatkhau$ /ajax/doimatkhau.php [L]
+RewriteRule ^dangnhap$ /ajax/dangnhap.php [L]
+RewriteRule ^dangky$ /ajax/dangky.php [L]
+RewriteRule ^muacode$ /ajax/muacode.php [L]
+RewriteRule ^taosite$ /ajax/taosite.php [L]
+RewriteRule ^napkimcuong$ /ajax/napkimcuong.php [L]
+RewriteRule ^quenmkajax$ /ajax/quenmk.php [L]
+RewriteRule ^chuyentienajax$ /ajax/chuyentien.php [L]
+RewriteRule ^themmomo$ /ajax/themomo.php [L]
+RewriteRule ^themtsrajax$ /ajax/themtsr.php [L]
+RewriteRule ^chucnangmomo$ /ajax/chucnangmomo.php [L]
+RewriteRule ^giahanapimomoajax$ /ajax/giahanapimomo.php [L]
+
+
+# API | NHĐ RIGHT
+RewriteRule ^chargingws/muahost$ /api/muahost.php [L]
+RewriteRule ^chargingws/muadomain$ /api/muadomain.php [L]
+RewriteRule ^chargingws/checkdomain$ /api/checkdomain.php [L]
+RewriteRule ^api-reset-pass$ /api/apiresetpass.php [L]
+RewriteRule ^api-xoa-host$ /api/apixoahost.php [L]
+RewriteRule ^chargingws/rutkimcuong$ /api/napkimcuong.php [L]
+RewriteRule ^historyapimbbank/(.*)/(.*)$ /api/lsgdmbbank.php?tokenmbbank=$1&sotaikhoan=$2 [L]
+RewriteRule ^getmoneymbbank/(.*)/(.*)$ /api/getmoneymbbank.php?tokenmbbank=$1&sotaikhoan=$2 [L]
+RewriteRule ^historyapitsr/(.*)$ /api/lsgdthesieure.php?token=$1 [L]
+RewriteRule ^historyapimomo/(.*)$ /api/lsgdmomo.php?token=$1 [L]
+RewriteRule ^getmoneyapimomo/(.*)$ /api/getmoneymomo.php?tokenbalance=$1 [L]
+RewriteRule ^TRANSFERAPIMOMO/(.*)/(.*)/(.*)/(.*)/(.*)$ /api/transfermomo.php?tokentransfer=$1&phone=$2&password=$3&amount=$4&comment=$5 [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
